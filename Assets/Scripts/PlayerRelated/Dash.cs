@@ -9,15 +9,19 @@ public class Dash : MonoBehaviour
     Vector2 LastAxis = Vector2.down;
 
     PlayerMovement _pMove;
+    Stamina _pStam;
 
     public float dashDistance = 1f;
     public float dashTine = 0.5f;
+    public bool needEnoughStamina = false;
+    public float staminaCost = 25;
 
     private void Start()
     {
         _mainCam = Camera.main;
         rb2d = GetComponent<Rigidbody2D>();
         _pMove = GetComponent<PlayerMovement>();
+        _pStam = GetComponent<Stamina>();
     }
 
     public void OnMove(InputValue _value)
@@ -30,8 +34,13 @@ public class Dash : MonoBehaviour
 
     public void OnDash()
     {
-        var veloNeeded = (dashDistance / dashTine);
-        print(veloNeeded);
-        rb2d.linearVelocity += veloNeeded * LastAxis;
+        var use_succeed = _pStam.useStamina(needEnoughStamina, staminaCost);
+
+        if (use_succeed)
+        {
+            var veloNeeded = (dashDistance / dashTine);
+            print(veloNeeded);
+            rb2d.linearVelocity += veloNeeded * LastAxis;
+        }
     }
 }
