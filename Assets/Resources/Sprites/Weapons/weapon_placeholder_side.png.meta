@@ -1,0 +1,618 @@
+fileFormatVersion: 2
+guid: d8b6c04743833184b96724cdf3b000ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7268265710688373440
+    second: weapon_placeholder_side_0
+  - first:
+      213: -1782925548512413537
+    second: weapon_placeholder_side_1
+  - first:
+      213: -3279765370709637338
+    second: weapon_placeholder_side_2
+  - first:
+      213: 3837103202014610180
+    second: weapon_placeholder_side_3
+  - first:
+      213: 271091133763252110
+    second: weapon_placeholder_side_4
+  - first:
+      213: 7483953663162215094
+    second: weapon_placeholder_side_5
+  - first:
+      213: -184963663411518907
+    second: weapon_placeholder_side_6
+  - first:
+      213: 8988044888244419216
+    second: weapon_placeholder_side_7
+  - first:
+      213: 3385691328261272007
+    second: weapon_placeholder_side_8
+  - first:
+      213: 239820280109420264
+    second: weapon_placeholder_side_9
+  - first:
+      213: -1340518881766359706
+    second: weapon_placeholder_side_10
+  - first:
+      213: 1320846426634145299
+    second: weapon_placeholder_side_11
+  - first:
+      213: 3594523717623669685
+    second: weapon_placeholder_side_12
+  - first:
+      213: -5577770657750211475
+    second: weapon_placeholder_side_13
+  - first:
+      213: -2843100564742464824
+    second: weapon_placeholder_side_14
+  - first:
+      213: -4490142664960428893
+    second: weapon_placeholder_side_15
+  - first:
+      213: -896156134142041023
+    second: weapon_placeholder_side_16
+  - first:
+      213: 7125573044404012766
+    second: weapon_placeholder_side_17
+  - first:
+      213: 4003994247473646442
+    second: weapon_placeholder_side_18
+  - first:
+      213: -3091092941255565534
+    second: weapon_placeholder_side_19
+  - first:
+      213: 2076315590713034240
+    second: weapon_placeholder_side_20
+  - first:
+      213: -1000184758633367640
+    second: weapon_placeholder_side_21
+  - first:
+      213: 6885569182655601411
+    second: weapon_placeholder_side_22
+  - first:
+      213: -2639165973182151957
+    second: weapon_placeholder_side_23
+  - first:
+      213: 1076384395128937684
+    second: weapon_placeholder_side_24
+  - first:
+      213: -5644500536446896785
+    second: weapon_placeholder_side_25
+  - first:
+      213: 4325200395201792634
+    second: weapon_placeholder_side_26
+  - first:
+      213: 7533241267760120510
+    second: weapon_placeholder_side_27
+  - first:
+      213: 1870093842839514901
+    second: weapon_placeholder_side_28
+  - first:
+      213: 1260434100011968028
+    second: weapon_placeholder_side_29
+  - first:
+      213: -2256089374230543791
+    second: weapon_placeholder_side_30
+  - first:
+      213: 6922286723073929411
+    second: weapon_placeholder_side_31
+  - first:
+      213: -7256307491318455522
+    second: weapon_placeholder_side_32
+  - first:
+      213: -7977149512664950867
+    second: weapon_placeholder_side_33
+  - first:
+      213: 4903455225233226062
+    second: weapon_placeholder_side_34
+  - first:
+      213: -5968347814422452034
+    second: weapon_placeholder_side_35
+  - first:
+      213: 6176626086579989109
+    second: weapon_placeholder_side_36
+  - first:
+      213: 7195730012217840105
+    second: weapon_placeholder_side_37
+  - first:
+      213: -4629525096231561924
+    second: weapon_placeholder_side_38
+  - first:
+      213: -6006845615417023711
+    second: weapon_placeholder_side_39
+  - first:
+      213: -8175212716896726397
+    second: weapon_placeholder_side_40
+  - first:
+      213: 588517851428929206
+    second: weapon_placeholder_side_41
+  - first:
+      213: -9140527576108644668
+    second: weapon_placeholder_side_42
+  - first:
+      213: 1669170832995471170
+    second: weapon_placeholder_side_43
+  - first:
+      213: -1012180374146253814
+    second: weapon_placeholder_side_44
+  - first:
+      213: 4247531558299125626
+    second: weapon_placeholder_side_45
+  - first:
+      213: -2335428077833799841
+    second: weapon_placeholder_side_46
+  - first:
+      213: 8477774541137630816
+    second: weapon_placeholder_side_47
+  - first:
+      213: 4107266519403417467
+    second: weapon_placeholder_side_48
+  - first:
+      213: 6510790819138493529
+    second: weapon_placeholder_side_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: weapon_placeholder_side_27
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb2c72c25037b8860800000000000000
+      internalID: 7533241267760120510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f281f1178e3f910800000000000000
+      internalID: 1870093842839514901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_29
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16a00ac226fd7110800000000000000
+      internalID: 1260434100011968028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_30
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152847bdaa2c0b0e0800000000000000
+      internalID: -2256089374230543791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_31
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0793a4917e01060800000000000000
+      internalID: 6922286723073929411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_32
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1325fe38ca6c4b90800000000000000
+      internalID: -7256307491318455522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7dc6178c87b4190800000000000000
+      internalID: -7977149512664950867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e493f083c829c0440800000000000000
+      internalID: 4903455225233226062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_35
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8ee51d84b2c2da0800000000000000
+      internalID: -5968347814422452034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57ae20953b8c7b550800000000000000
+      internalID: 6176626086579989109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e19cdd425e5cd360800000000000000
+      internalID: 7195730012217840105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c359c58047f90cfb0800000000000000
+      internalID: -4629525096231561924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapon_placeholder_side_39
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 123a4780db563aca0800000000000000
+      internalID: -6006845615417023711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c3a465ff90481e34891e74055dd0d5ac
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      weapon_placeholder_side_0: -7268265710688373440
+      weapon_placeholder_side_1: -1782925548512413537
+      weapon_placeholder_side_10: -1340518881766359706
+      weapon_placeholder_side_11: 1320846426634145299
+      weapon_placeholder_side_12: 3594523717623669685
+      weapon_placeholder_side_13: -5577770657750211475
+      weapon_placeholder_side_14: -2843100564742464824
+      weapon_placeholder_side_15: -4490142664960428893
+      weapon_placeholder_side_16: -896156134142041023
+      weapon_placeholder_side_17: 7125573044404012766
+      weapon_placeholder_side_18: 4003994247473646442
+      weapon_placeholder_side_19: -3091092941255565534
+      weapon_placeholder_side_2: -3279765370709637338
+      weapon_placeholder_side_20: 2076315590713034240
+      weapon_placeholder_side_21: -1000184758633367640
+      weapon_placeholder_side_22: 6885569182655601411
+      weapon_placeholder_side_23: -2639165973182151957
+      weapon_placeholder_side_24: 1076384395128937684
+      weapon_placeholder_side_25: -5644500536446896785
+      weapon_placeholder_side_26: 4325200395201792634
+      weapon_placeholder_side_27: 7533241267760120510
+      weapon_placeholder_side_28: 1870093842839514901
+      weapon_placeholder_side_29: 1260434100011968028
+      weapon_placeholder_side_3: 3837103202014610180
+      weapon_placeholder_side_30: -2256089374230543791
+      weapon_placeholder_side_31: 6922286723073929411
+      weapon_placeholder_side_32: -7256307491318455522
+      weapon_placeholder_side_33: -7977149512664950867
+      weapon_placeholder_side_34: 4903455225233226062
+      weapon_placeholder_side_35: -5968347814422452034
+      weapon_placeholder_side_36: 6176626086579989109
+      weapon_placeholder_side_37: 7195730012217840105
+      weapon_placeholder_side_38: -4629525096231561924
+      weapon_placeholder_side_39: -6006845615417023711
+      weapon_placeholder_side_4: 271091133763252110
+      weapon_placeholder_side_40: -8175212716896726397
+      weapon_placeholder_side_41: 588517851428929206
+      weapon_placeholder_side_42: -9140527576108644668
+      weapon_placeholder_side_43: 1669170832995471170
+      weapon_placeholder_side_44: -1012180374146253814
+      weapon_placeholder_side_45: 4247531558299125626
+      weapon_placeholder_side_46: -2335428077833799841
+      weapon_placeholder_side_47: 8477774541137630816
+      weapon_placeholder_side_48: 4107266519403417467
+      weapon_placeholder_side_49: 6510790819138493529
+      weapon_placeholder_side_5: 7483953663162215094
+      weapon_placeholder_side_50: -658647214
+      weapon_placeholder_side_51: -1085255930
+      weapon_placeholder_side_6: -184963663411518907
+      weapon_placeholder_side_7: 8988044888244419216
+      weapon_placeholder_side_8: 3385691328261272007
+      weapon_placeholder_side_9: 239820280109420264
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

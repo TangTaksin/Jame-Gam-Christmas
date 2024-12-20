@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 InputAxis;
     public float topSpeed;
     public float accelerationRate, deccelerationRate;
+    public CharacterState.MovementState[] stateRestriction;
 
     Rigidbody2D rb2d;
 

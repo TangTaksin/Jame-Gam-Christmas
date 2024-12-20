@@ -10,11 +10,14 @@ public class Dash : MonoBehaviour
 
     PlayerMovement _pMove;
     Stamina _pStam;
+    Character _character;
 
     public float dashDistance = 1f;
     public float dashTine = 0.5f;
     public bool needEnoughStamina = false;
     public float staminaCost = 25;
+
+    public CharacterState.MovementState[] stateRestriction;
 
     private void Start()
     {

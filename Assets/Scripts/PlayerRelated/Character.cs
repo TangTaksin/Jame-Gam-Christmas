@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public CharacterState.MovementState current_state = CharacterState.MovementState.idling;
+    
+    public void SetState(CharacterState.MovementState _state)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        current_state = _state;
     }
 }

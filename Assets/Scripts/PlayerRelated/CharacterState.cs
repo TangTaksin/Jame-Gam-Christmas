@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class CharacterState : MonoBehaviour
+public class CharacterState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public enum MovementState
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        idling,
+        walking,
+        dashing,
+        attacking,
+        dead
     }
 }
