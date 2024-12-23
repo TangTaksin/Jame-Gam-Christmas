@@ -12,7 +12,7 @@ public class ChaseState : MonoBehaviour
     void Start()
     {
         if (target != null)
-            target = GameObject.Find("Angri_elf").transform;
+            target = GameObject.Find("Player").transform;
 
         rb2d = GetComponent<Rigidbody2D>();
     }
