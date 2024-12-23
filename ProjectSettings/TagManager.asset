@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - World
   - NoMask
+  serializedVersion: 3
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -33,6 +35,22 @@ TagManager:
   - Camera2
   - Camera3
   - Camera4
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
