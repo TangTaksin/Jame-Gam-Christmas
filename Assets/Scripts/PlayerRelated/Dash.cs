@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Dash : State
 {
-
+    Health _hp;
     Stamina _pStam;
 
     public float dashForce = 1f;
@@ -15,6 +15,7 @@ public class Dash : State
 
     private void Start()
     {
+        _hp = GetComponent<Health>();
         _pStam = GetComponent<Stamina>();
     }
 
@@ -33,6 +34,7 @@ public class Dash : State
         {
             rigid.AddForce(s_manager.LastInput * dashForce, ForceMode2D.Impulse);
             anim.Play("Dash");  
+
         }
     }
 
@@ -41,11 +43,12 @@ public class Dash : State
         base.OnUpdate();
 
         var isDashing = anim.GetCurrentAnimatorStateInfo(0).IsName("Dash");
+        _hp.SetInvul(isDashing);
+
         if (!isDashing)
         {
             dash_inputed = false;
             isComplete = true;
         }
-
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 public class Health : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Health : MonoBehaviour
     public HealthEvent OnHealthOut;
 
     public UnityEvent OnHealthChanged, OnHealthOuted;
+
+    bool isInvul;
 
     int cur_health;
     public int current_health
@@ -30,10 +33,20 @@ public class Health : MonoBehaviour
     {
         current_health = max_health;
     }
-
-    public void DamageHealth(int amount)
+    
+    public void SetInvul(bool state)
     {
+        isInvul = state;
+    }
+
+    public int DamageHealth(int amount)
+    {
+        if (isInvul)
+            return 0;
+
         current_health -= amount;
+        StartCoroutine(FlashColor(Color.red, 0.1f));
+
 
         if (current_health <= 0)
         {
@@ -41,6 +54,8 @@ public class Health : MonoBehaviour
             OnHealthOut?.Invoke(current_health);
             OnHealthOuted?.Invoke();
         }
+        
+        return amount;
     }
 
     public void HealHealth(int amount)
@@ -56,5 +71,16 @@ public class Health : MonoBehaviour
     public void OnDeath()
     {
         Destroy(gameObject);
+    }
+
+    private IEnumerator FlashColor(Color color, float duration)
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        Color originalColor = Color.white;
+
+        sprite.color = color;
+        yield return new WaitForSeconds(duration);
+
+        sprite.color = originalColor;
     }
 }

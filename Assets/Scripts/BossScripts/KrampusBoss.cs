@@ -209,6 +209,8 @@ public class KrampusBoss : MonoBehaviour
             Debug.Log("Triggering MeleeAttack animation.");
         }
 
+        StartCoroutine(FlashColor(Color.yellow, 0.5f));
+
         // Delay damage application to sync with animation
         StartCoroutine(ApplyMeleeDamage());
     }
@@ -216,7 +218,7 @@ public class KrampusBoss : MonoBehaviour
     private IEnumerator FlashColor(Color color, float duration)
     {
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        Color originalColor = sprite.color;
+        Color originalColor = Color.white;
 
         sprite.color = color;
         yield return new WaitForSeconds(duration);
@@ -228,7 +230,7 @@ public class KrampusBoss : MonoBehaviour
     {
         print("Applying");
 
-        yield return new WaitForSeconds(0.1f); // Adjust delay to sync with animation
+        yield return new WaitForSeconds(0.5f); // Adjust delay to sync with animation
 
         // Check for all players/enemies in range
         Collider2D[] hitTargets = Physics2D.OverlapCircleAll(transform.position, meleeAttackRange, targetLayer);
@@ -242,7 +244,11 @@ public class KrampusBoss : MonoBehaviour
             if (targetHealth != null && target.CompareTag("Player"))
             {
                 // Apply damage
-                targetHealth.DamageHealth(1); // Adjust damage value
+                var damageSent = targetHealth.DamageHealth(1); // Adjust damage value
+
+                if (damageSent <= 0)
+                    continue;
+
                 Debug.Log($"Player {target.name} takes damage from melee attack!");
 
                 // Optional: Apply knockback
