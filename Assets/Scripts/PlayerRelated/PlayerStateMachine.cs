@@ -9,8 +9,6 @@ public class PlayerStateMachine : StateManager
     public State dashState;
     public State attackState;
 
-    Rigidbody2D rigid2d;
-    Animator animator;
 
     public bool dashPressed { get; protected set; } 
     public float dashBufferTime = .1f;
@@ -22,8 +20,7 @@ public class PlayerStateMachine : StateManager
 
     protected override void Start()
     {
-        rigid2d = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        base.Start();
 
         idleState?.SetUp(animator, rigid2d, this);
         moveState?.SetUp(animator, rigid2d, this);

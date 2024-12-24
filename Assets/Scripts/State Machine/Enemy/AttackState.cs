@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AttackState : State
 {
-    public State OnPlayerLeave;
+    public Attack attackData;
 
     public override void OnEnter()
     {

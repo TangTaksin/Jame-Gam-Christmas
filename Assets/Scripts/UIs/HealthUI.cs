@@ -21,7 +21,7 @@ public class HealthUI : MonoBehaviour
         var cur_hp = player_health.current_health;
         var max_hp = player_health.max_health;
 
-        for (int i = 1; i < max_hp; ++i)
+        for (int i = 0; i < max_hp-1; ++i)
         {
             if (Icons.Count < max_hp)
             {

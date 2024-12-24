@@ -1,33 +1,43 @@
 using UnityEngine;
 
-public class ChaseState : MonoBehaviour
+public class ChaseState : State
 {
-    public Transform target;
     public float accel_rate = 5;
     public float max_speed = 10;
 
-    Rigidbody2D rb2d;
+    EnemyStateMachine esm;
+
+    private void Start()
+    {
+        esm = GetComponent<EnemyStateMachine>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void OnEnter()
     {
-        if (target != null)
-            target = GameObject.Find("Angri_elf").transform;
+        base.OnEnter();
+    }
 
-        rb2d = GetComponent<Rigidbody2D>();
+    public override void OnUpdate()
+    {
+        base.OnUpdate();
+
+        if (esm.distantFromTarget <= esm.attackDistance)
+        {
+            isComplete = true;
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    public override void OnFixedUpdate()
     {
-        var direction = target.position - transform.position;
-        direction.Normalize();
+        base.OnFixedUpdate();
 
-        var targetSpeed = max_speed * direction;
+        var targetSpeed = max_speed * esm.vectorToTarget;
 
-        var speedDif = targetSpeed - (Vector3)rb2d.linearVelocity;
+        var speedDif = targetSpeed - (Vector3)rigid.linearVelocity;
         var movement = speedDif * accel_rate;
 
-        rb2d.AddForce(movement);
+        rigid.AddForce(movement);
     }
 }

@@ -4,12 +4,16 @@ public abstract class StateManager : MonoBehaviour
 {
     public State state;
 
+    public Rigidbody2D rigid2d;
+    public Animator animator;
+
     public Vector2 InputAxis { get; set; }
     public Vector2 LastInput{ get; set; }
 
     protected virtual void Start()
     {
-
+        rigid2d = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     protected virtual void Update()

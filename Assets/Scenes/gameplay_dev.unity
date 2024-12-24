@@ -1402,16 +1402,18 @@ GameObject:
   - component: {fileID: 1307604304}
   - component: {fileID: 1307604300}
   - component: {fileID: 1307604303}
+  - component: {fileID: 1307604306}
   - component: {fileID: 1307604302}
   - component: {fileID: 1307604301}
   - component: {fileID: 1307604305}
+  - component: {fileID: 1307604307}
   m_Layer: 7
-  m_Name: Triangle
+  m_Name: Reindeer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1307604298
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1456,8 +1458,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.7283019, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 7647265270379751256, guid: 850072d88498b434eb9fa73048452711, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1516,7 +1518,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: -0.44}
   m_Radius: 0.5
 --- !u!114 &1307604301
 MonoBehaviour:
@@ -1597,9 +1599,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27000cc78e508ee42b98973f90f37fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1309476786}
   accel_rate: 5
   max_speed: 10
+--- !u!114 &1307604306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307604292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3d9af096f9bdc419793490760ef677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: {fileID: 0}
+  rigid2d: {fileID: 0}
+  animator: {fileID: 0}
+  ChaseState: {fileID: 1307604305}
+  AttackState: {fileID: 0}
+  Target: {fileID: 0}
+  vectorToTarget: {x: 0, y: 0, z: 0}
+  distantFromTarget: 0
+  attackDistance: 0
+--- !u!114 &1307604307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307604292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdd97314a5e1e5443a785cc9e59ff6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackData:
+    animationStateName: 
+    AttackDirection: {x: 0, y: 0}
+    attackPower: 1
+    knockbackPower: 100
+    attackmovement: {x: 0, y: 0}
+    areaCenter: {x: 0, y: 0}
+    areaSize: {x: 0, y: 0}
+    movement_start: 0
+    active_start: 0
+    active_end: 0
+    recovery_over: 0
 --- !u!1 &1309476781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,6 +1937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: {fileID: 1309476793}
+  rigid2d: {fileID: 0}
+  animator: {fileID: 0}
   idleState: {fileID: 1309476793}
   moveState: {fileID: 1309476784}
   dashState: {fileID: 1309476788}
