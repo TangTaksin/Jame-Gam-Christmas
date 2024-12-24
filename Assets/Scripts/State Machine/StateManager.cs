@@ -1,17 +1,40 @@
 using UnityEngine;
 
-public class StateManager : MonoBehaviour
+public abstract class StateManager : MonoBehaviour
 {
-    public State State;
+    public State state;
 
-    private void Start()
+    public Vector2 InputAxis { get; set; }
+    public Vector2 LastInput{ get; set; }
+
+    protected virtual void Start()
     {
 
     }
 
-    private void Update()
+    protected virtual void Update()
     {
-        if (State)
-            State.OnUpdate();
+        if (state)
+        {
+            state.OnUpdate();
+            if (state.isComplete)
+            {
+                state.OnExit();
+                ChooseState();
+            }
+        }
+    }
+
+    protected virtual void FixedUpdate()
+    {
+        if (state)
+        {
+            state.OnFixedUpdate();
+        }
+    }
+
+    protected virtual void ChooseState()
+    {
+        state.OnEnter();
     }
 }

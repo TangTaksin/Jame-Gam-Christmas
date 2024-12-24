@@ -1,0 +1,688 @@
+fileFormatVersion: 2
+guid: 7e600646def200346822c13d3460b016
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7129797148389174833
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_0
+  - first:
+      213: 2313067598814169962
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_1
+  - first:
+      213: -5056315289957923400
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_2
+  - first:
+      213: -7638073646839971844
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_3
+  - first:
+      213: 5311935505685442063
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_4
+  - first:
+      213: 3315660305042084638
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_5
+  - first:
+      213: -613138044895543261
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_6
+  - first:
+      213: -2697101531420495359
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_7
+  - first:
+      213: -734826235315907853
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_8
+  - first:
+      213: 5364342187378112873
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_9
+  - first:
+      213: 1857560464213603868
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_10
+  - first:
+      213: -1083444595580649916
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_11
+  - first:
+      213: -4780065107135240979
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_12
+  - first:
+      213: -6354558406347843669
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_13
+  - first:
+      213: 5408076062996581895
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_14
+  - first:
+      213: 655512440092613789
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_15
+  - first:
+      213: 1876070677884087264
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_16
+  - first:
+      213: 8312349181850184964
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_17
+  - first:
+      213: -6524901390050507905
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_18
+  - first:
+      213: 5726538804687708706
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_19
+  - first:
+      213: -3287021707998510589
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_20
+  - first:
+      213: -2687284824129923682
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_21
+  - first:
+      213: -4684799883991499921
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_22
+  - first:
+      213: 7197724982014008009
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_23
+  - first:
+      213: -3151748860355171799
+    second: Christmas Elf-Sheet-Down-FXAndWeapon_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e645e2bb022f260800000000000000
+      internalID: 7129797148389174833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bc8c8d9baa91020800000000000000
+      internalID: 2313067598814169962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b58ea5880c54d9b0800000000000000
+      internalID: -5056315289957923400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffb4d78c7c100690800000000000000
+      internalID: -7638073646839971844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e6a26d239c7b940800000000000000
+      internalID: 5311935505685442063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1395e5fa77930e20800000000000000
+      internalID: 3315660305042084638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32049bb5232bd77f0800000000000000
+      internalID: -613138044895543261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102f4807278f19ad0800000000000000
+      internalID: -2697101531420495359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f29b58ae6f5dc5f0800000000000000
+      internalID: -734826235315907853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96970544cc8f17a40800000000000000
+      internalID: 5364342187378112873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16f242866167c910800000000000000
+      internalID: 1857560464213603868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e399271e4d6f0f0800000000000000
+      internalID: -1083444595580649916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4e6f56c1cc9adb0800000000000000
+      internalID: -4780065107135240979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba71a2d1cc210d7a0800000000000000
+      internalID: -6354558406347843669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e443da6885d0b40800000000000000
+      internalID: 5408076062996581895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9cd1995719d81900800000000000000
+      internalID: 655512440092613789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_16
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ebaec87754290a10800000000000000
+      internalID: 1876070677884087264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d60394a856b5370800000000000000
+      internalID: 8312349181850184964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f73469391c4e275a0800000000000000
+      internalID: -6524901390050507905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_19
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222a6edc3b0c87f40800000000000000
+      internalID: 5726538804687708706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas Elf-Sheet-Down-FXAndWeapon_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30240c50c272262d0800000000000000
+      internalID: -3287021707998510589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0c99f1f76cad9bb48bc22cd57957d55a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Christmas Elf-Sheet-Down-FXAndWeapon_0: 7129797148389174833
+      Christmas Elf-Sheet-Down-FXAndWeapon_1: 2313067598814169962
+      Christmas Elf-Sheet-Down-FXAndWeapon_10: 1857560464213603868
+      Christmas Elf-Sheet-Down-FXAndWeapon_11: -1083444595580649916
+      Christmas Elf-Sheet-Down-FXAndWeapon_12: -4780065107135240979
+      Christmas Elf-Sheet-Down-FXAndWeapon_13: -6354558406347843669
+      Christmas Elf-Sheet-Down-FXAndWeapon_14: 5408076062996581895
+      Christmas Elf-Sheet-Down-FXAndWeapon_15: 655512440092613789
+      Christmas Elf-Sheet-Down-FXAndWeapon_16: 1876070677884087264
+      Christmas Elf-Sheet-Down-FXAndWeapon_17: 8312349181850184964
+      Christmas Elf-Sheet-Down-FXAndWeapon_18: -6524901390050507905
+      Christmas Elf-Sheet-Down-FXAndWeapon_19: 5726538804687708706
+      Christmas Elf-Sheet-Down-FXAndWeapon_2: -5056315289957923400
+      Christmas Elf-Sheet-Down-FXAndWeapon_20: -3287021707998510589
+      Christmas Elf-Sheet-Down-FXAndWeapon_3: -7638073646839971844
+      Christmas Elf-Sheet-Down-FXAndWeapon_4: 5311935505685442063
+      Christmas Elf-Sheet-Down-FXAndWeapon_5: 3315660305042084638
+      Christmas Elf-Sheet-Down-FXAndWeapon_6: -613138044895543261
+      Christmas Elf-Sheet-Down-FXAndWeapon_7: -2697101531420495359
+      Christmas Elf-Sheet-Down-FXAndWeapon_8: -734826235315907853
+      Christmas Elf-Sheet-Down-FXAndWeapon_9: 5364342187378112873
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

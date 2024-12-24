@@ -1,47 +1,48 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : State
 {
     bool _isMoving;
 
     Vector2 InputAxis;
+    Vector2 LastInput;
     public float topSpeed;
-    public float accelerationRate, deccelerationRate;
-
-    Rigidbody2D rb2d;
+    public float accelerationRate;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        InputMovement();
-    }
-
-    public void OnMove(InputValue _value)
-    {
-        InputAxis = _value.Get<Vector2>();
-        InputAxis.Normalize();
-        _isMoving = InputAxis.x > 0;
-
-        print(string.Format("{0}, {1}", InputAxis, _isMoving));
 
     }
 
-    void InputMovement()
+    public override void OnEnter()
     {
+        base.OnEnter();
+        anim.Play("Walk");
+    }
+
+    public override void OnUpdate()
+    {
+        LastInput = s_manager.LastInput;
+        anim.SetFloat("InputX", LastInput.x);
+        anim.SetFloat("InputY", LastInput.y);
+
+        if (!_isMoving)
+        {
+            isComplete = true;
+        }
+    }
+
+    public override void OnFixedUpdate()
+    {        
+        InputAxis = s_manager.InputAxis;
+
         var targetSpeed = topSpeed * InputAxis;
-        var rate = _isMoving ? accelerationRate : deccelerationRate;
 
-        var speedDif = targetSpeed - rb2d.linearVelocity;
-        var movement = speedDif * rate;
+        var speedDif = targetSpeed - rigid.linearVelocity;
+        var movement = speedDif * accelerationRate;
 
-        rb2d.AddForce(movement);
-
+        rigid.AddForce(movement);
     }
 }
