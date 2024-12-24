@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,7 +11,7 @@ public class KrampusBoss : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private GameObject minionPrefab;
     [SerializeField] private Transform[] minionSpawnPoints;
-    [SerializeField] private Animator animator;
+    [SerializeField] private Animator animator; // Reference to Animator
 
     private NavMeshAgent agent;
     private Health health;
@@ -18,12 +20,8 @@ public class KrampusBoss : MonoBehaviour
     [SerializeField] private float meleeAttackRange = 2f;
     [SerializeField] private float rangedAttackRange = 5f;
     [SerializeField] private float attackCooldown = 2f;
-    [SerializeField] private float secondAttackCooldown = 5f;  // Added cooldown for the second attack
-    [SerializeField] private float minionSummonCooldown = 5f;
 
     private float timeSinceLastAttack = 0f;
-    private float timeSinceLastMinionSummon = 0f;
-    private float timeSinceLastSecondAttack = 0f;  // Timer for second attack
 
     [Header("Phase Thresholds")]
     [SerializeField] private float phase2Threshold = 70;
@@ -32,56 +30,83 @@ public class KrampusBoss : MonoBehaviour
     private enum BossPhase { Phase1, Phase2, Phase3 }
     private BossPhase currentPhase = BossPhase.Phase1;
 
+    // Phase 2 Minion Summon Parameters
+    private float minionSummonCooldown = 5f;
+    private float timeSinceLastMinionSummon = 0f;
+
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject hitEffectPrefab;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();
 
-        if (!agent || !health || !animator)
-        {
-            Debug.LogError("Required components are missing.");
-            return;
-        }
+        if (agent == null) Debug.LogError("NavMeshAgent component is missing.");
+        if (health == null) Debug.LogError("Health component is missing.");
+        if (animator == null) Debug.LogError("Animator component is missing.");
 
+        // Subscribe to Health Events
         Health.OnHealthChange += HandleHealthChange;
         Health.OnHealthOut += HandleDeath;
     }
 
     private void Update()
     {
-        if (playerTarget == null) return;
+        if (playerTarget == null)
+        {
+            Debug.LogWarning("Player target not assigned!");
+            return;
+        }
 
         // Lock rotation on all axes, only allowing Y-axis rotation
         transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        // Move towards player
-        MoveTowardsPlayer();
-
-        // Update timers
-        timeSinceLastAttack += Time.deltaTime;
-        timeSinceLastSecondAttack += Time.deltaTime;  // Update second attack timer
-        timeSinceLastMinionSummon += Time.deltaTime;
-
-        // Handle phases and attacks
-        HandlePhases();
-    }
-
-    private void MoveTowardsPlayer()
-    {
+        // Move towards the player
         if (agent.isActiveAndEnabled)
         {
             agent.SetDestination(playerTarget.position);
         }
+
+        // Update timers
+        timeSinceLastAttack += Time.deltaTime;
+
+        // Only update the minion summon timer in Phase 2
+        if (currentPhase == BossPhase.Phase2)
+        {
+            timeSinceLastMinionSummon += Time.deltaTime;
+        }
+
+        // Handle attack pattern and phases
+        HandlePhases();
     }
 
     private void HandlePhases()
     {
         float healthPercentage = (float)health.current_health / health.max_health * 100;
 
-        // Phase transition logic
-        if (healthPercentage <= phase3Threshold && currentPhase != BossPhase.Phase3) EnterPhase3();
-        else if (healthPercentage <= phase2Threshold && currentPhase != BossPhase.Phase2) EnterPhase2();
-        else if (currentPhase != BossPhase.Phase1) EnterPhase1();
+        // Switch between phases
+        if (healthPercentage <= phase3Threshold)
+        {
+            if (currentPhase != BossPhase.Phase3)
+            {
+                EnterPhase3();
+            }
+        }
+        else if (healthPercentage <= phase2Threshold)
+        {
+            if (currentPhase != BossPhase.Phase2)
+            {
+                EnterPhase2();
+            }
+        }
+        else
+        {
+            if (currentPhase != BossPhase.Phase1)
+            {
+                EnterPhase1();
+            }
+        }
 
         // Execute attack pattern
         ExecuteAttackPattern();
@@ -94,104 +119,128 @@ public class KrampusBoss : MonoBehaviour
         if (timeSinceLastAttack >= attackCooldown)
         {
             if (distanceToPlayer <= meleeAttackRange)
+            {
                 PerformMeleeAttack();
-            else if (distanceToPlayer <= rangedAttackRange)
+            }
+            else if (distanceToPlayer >= rangedAttackRange)
+            {
                 PerformRangedAttack();
+            }
 
             timeSinceLastAttack = 0f;
         }
 
-        // Perform second attack after cooldown
-        if (timeSinceLastSecondAttack >= secondAttackCooldown)
-        {
-            PerformSecondAttack();
-            timeSinceLastSecondAttack = 0f; // Reset second attack timer
-        }
-
-        // Summon minions in Phase 2
+        // Summon minions only in Phase 2
         if (currentPhase == BossPhase.Phase2 && timeSinceLastMinionSummon >= minionSummonCooldown)
         {
             SummonMinions();
-            timeSinceLastMinionSummon = 0f;
+            timeSinceLastMinionSummon = 0f; // Reset the timer after summoning
         }
     }
 
     private void EnterPhase1()
     {
         currentPhase = BossPhase.Phase1;
-        // Reset or special effects for Phase 1 if needed
+        Debug.Log("Entered Phase 1");
     }
 
     private void EnterPhase2()
     {
         currentPhase = BossPhase.Phase2;
-        timeSinceLastMinionSummon = 0f;  // Reset minion summon cooldown
-        // Phase 2 effects
+        Debug.Log("Entered Phase 2");
+
+        // Reset minion summon timer when entering Phase 2
+        timeSinceLastMinionSummon = 0f;
     }
 
     private void EnterPhase3()
     {
         currentPhase = BossPhase.Phase3;
+        Debug.Log("Entered Phase 3");
+
+        // Buff stats for Phase 3
         agent.speed += 2f;
         attackCooldown -= 0.5f;
-        // Phase 3 effects (e.g., damage boost, visual cues)
     }
 
     private void PerformMeleeAttack()
     {
-        TriggerAttackAnimation("MeleeAttack");
+        Debug.Log("Krampus performs a melee attack!");
 
-        // Find player and apply damage
-        GameObject player = GameObject.FindWithTag("Player");
-        if (player != null)
+        // Play melee attack animation
+        if (animator != null)
         {
-            Health playerHealth = player.GetComponent<Health>();
-            playerHealth?.DamageHealth(25);  // Adjust damage as needed
+            animator.SetTrigger("MeleeAttack");
+            Debug.Log("Triggering MeleeAttack animation.");
+        }
+
+        // Delay damage application to sync with animation
+        StartCoroutine(ApplyMeleeDamage());
+    }
+
+    private IEnumerator ApplyMeleeDamage()
+    {
+        yield return new WaitForSeconds(0.5f); // Adjust delay to sync with animation
+
+        // Check for all players/enemies in range
+        Collider[] hitTargets = Physics.OverlapSphere(transform.position, meleeAttackRange);
+        foreach (Collider target in hitTargets)
+        {
+            Health targetHealth = target.GetComponent<Health>();
+            if (targetHealth != null && target.CompareTag("Player"))
+            {
+                // Apply damage
+                targetHealth.DamageHealth(25); // Adjust damage value
+                Debug.Log($"Player {target.name} takes damage from melee attack!");
+
+                // Optional: Apply knockback
+                Rigidbody targetRigidbody = target.GetComponent<Rigidbody>();
+                if (targetRigidbody != null)
+                {
+                    Vector3 knockbackDirection = (target.transform.position - transform.position).normalized;
+                    targetRigidbody.AddForce(knockbackDirection * 5f, ForceMode.Impulse);
+                }
+
+                // Optional: Play hit effect
+                PlayHitEffect(target.transform.position);
+            }
+        }
+    }
+
+    private void PlayHitEffect(Vector3 position)
+    {
+        // Example: Spawn particle effect at the target position
+        if (hitEffectPrefab != null)
+        {
+            Instantiate(hitEffectPrefab, position, Quaternion.identity);
         }
     }
 
     private void PerformRangedAttack()
     {
-        TriggerAttackAnimation("RangedAttack");
+        Debug.Log("Krampus performs a ranged attack!");
 
         if (projectilePrefab != null && projectileSpawnPoint != null)
         {
             GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPoint.position, Quaternion.identity);
             Vector3 direction = (playerTarget.position - projectileSpawnPoint.position).normalized;
-            projectile.transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
+            Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction); // Adjust rotation
+            projectile.transform.rotation = rotation;
 
             Projectile projectileScript = projectile.GetComponent<Projectile>();
-            projectileScript?.Init(playerTarget);
-        }
-    }
-
-    private void PerformSecondAttack()
-    {
-        // Perform second attack logic here
-        Debug.Log("Krampus performs a second attack!");
-
-        // Example: A ground slam or special attack
-        TriggerAttackAnimation("SecondAttack");
-
-        // If the second attack should deal damage or have special effects
-        GameObject player = GameObject.FindWithTag("Player");
-        if (player != null)
-        {
-            Health playerHealth = player.GetComponent<Health>();
-            playerHealth?.DamageHealth(50);  // Adjust damage as needed for the second attack
-        }
-    }
-
-    private void TriggerAttackAnimation(string attackType)
-    {
-        if (animator != null)
-        {
-            animator.SetTrigger(attackType);
+            if (projectileScript != null)
+            {
+                projectileScript.Init(playerTarget); // Target the player
+            }
         }
     }
 
     private void SummonMinions()
     {
+        if (currentPhase != BossPhase.Phase2) return;
+
+        Debug.Log("Krampus summons minions!");
+
         foreach (Transform spawnPoint in minionSpawnPoints)
         {
             if (minionPrefab != null)
@@ -203,27 +252,32 @@ public class KrampusBoss : MonoBehaviour
 
     private void HandleHealthChange(int currentHealth)
     {
-        // Handle health changes, such as updating UI or playing sound effects
+        Debug.Log($"Health Changed: {currentHealth}");
     }
 
     private void HandleDeath(int remainingHealth)
     {
         if (remainingHealth <= 0)
         {
+            Debug.Log("Krampus has been defeated!");
+
+            // Trigger death animation or effect
             if (animator != null)
             {
                 animator.SetTrigger("Death");
             }
-            Destroy(gameObject);  // Destroy the boss after death
+
+            // Destroy the boss after death
+            Destroy(gameObject);
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, meleeAttackRange);
+        Gizmos.color = new Color(0, 1, 0, 0.3f);
+        Gizmos.DrawSphere(transform.position, meleeAttackRange);
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, rangedAttackRange);
+        Gizmos.color = new Color(1, 0, 0, 0.3f);
+        Gizmos.DrawSphere(transform.position, rangedAttackRange);
     }
 }
