@@ -12,16 +12,17 @@ public class HealthUI : MonoBehaviour
     {
         if (player_health)
         {
-            UpdateUI();
+            player_health.OnHealthChange += UpdateUI;
+            UpdateUI(0);
         }
     }
 
-    void UpdateUI()
+    void UpdateUI(int amount)
     {
         var cur_hp = player_health.current_health;
         var max_hp = player_health.max_health;
 
-        for (int i = 0; i < max_hp-1; ++i)
+        for (int i = 0; i < max_hp; ++i)
         {
             if (Icons.Count < max_hp)
             {
@@ -30,7 +31,7 @@ public class HealthUI : MonoBehaviour
                 Icons.Add(new_icon.GetComponent<HealthIcon>());
             }
 
-            if (i <= cur_hp)
+            if (i+1 <= cur_hp)
                 Icons[i].SetState(true);
             else
                 Icons[i].SetState(false);

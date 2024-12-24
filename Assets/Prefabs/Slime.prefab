@@ -18,7 +18,8 @@ GameObject:
   - component: {fileID: 8885985628121231243}
   - component: {fileID: -6674150895169543126}
   - component: {fileID: -1610662844933273815}
-  m_Layer: 7
+  - component: {fileID: 479282910422413383}
+  m_Layer: 23
   m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,6 +187,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   max_health: 3
+  OnHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHealthOuted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3589087143640782693}
+        m_TargetAssemblyTypeName: Health, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5328428829765606411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,3 +278,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &479282910422413383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 932485965268014204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b3df9f27d3809742a0a49e506fab9d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  interval: 1
+  targetTag: Player

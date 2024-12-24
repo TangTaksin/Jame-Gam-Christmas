@@ -4,6 +4,7 @@ public class BossProjectile : MonoBehaviour
 {
     public float speed = 5f;
     public float lifetime = 3f;
+    public int damage = 1;
 
     void Start()
     {
@@ -20,6 +21,8 @@ public class BossProjectile : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Handle player taking damage here
+            collision.GetComponent<Health>().DamageHealth(damage);
+
             Destroy(gameObject);
         }
     }

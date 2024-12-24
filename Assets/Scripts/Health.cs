@@ -1,12 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
     public int max_health;
 
     public delegate void HealthEvent(int hp);
-    public static HealthEvent OnHealthChange;
-    public static HealthEvent OnHealthOut;
+    public HealthEvent OnHealthChange;
+    public HealthEvent OnHealthOut;
+
+    public UnityEvent OnHealthChanged, OnHealthOuted;
 
     int cur_health;
     public int current_health
@@ -17,6 +20,7 @@ public class Health : MonoBehaviour
             {
                 cur_health = value;
                 OnHealthChange?.Invoke(current_health);
+                OnHealthChanged?.Invoke();
             }
         }
         get { return cur_health; }
@@ -35,6 +39,7 @@ public class Health : MonoBehaviour
         {
             current_health = 0;
             OnHealthOut?.Invoke(current_health);
+            OnHealthOuted?.Invoke();
         }
     }
 
@@ -46,5 +51,10 @@ public class Health : MonoBehaviour
         {
             current_health = max_health;
         }
+    }
+
+    public void OnDeath()
+    {
+        Destroy(gameObject);
     }
 }

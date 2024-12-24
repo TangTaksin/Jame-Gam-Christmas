@@ -21,6 +21,7 @@ public class KrampusBoss : MonoBehaviour
     [SerializeField] private Slider healthBar;
 
     [Header("Attack Parameters")]
+    public LayerMask targetLayer;
     [SerializeField] private float meleeAttackRange = 2f;
     [SerializeField] private float rangedAttackRange = 5f;
     [SerializeField] private float attackCooldown = 2f;
@@ -35,7 +36,7 @@ public class KrampusBoss : MonoBehaviour
     private BossPhase currentPhase = BossPhase.Phase1;
 
     // Phase 2 Minion Summon Parameters
-    private float minionSummonCooldown = 30f;
+    private float minionSummonCooldown = 1f;
     private float timeSinceLastMinionSummon = 0f;
 
     [Header("Visual Effects")]
@@ -58,15 +59,15 @@ public class KrampusBoss : MonoBehaviour
         if (animator == null) Debug.LogError("Animator component is missing.");
 
         // Subscribe to Health Events
-        Health.OnHealthChange += HandleHealthChange;
-        Health.OnHealthOut += HandleDeath;
-        Health.OnHealthChange += UpdateHealthBar;
+        health.OnHealthChange += HandleHealthChange;
+        health.OnHealthOut += HandleDeath;
+        health.OnHealthChange += UpdateHealthBar;
     }
 
     private void OnDestroy()
     {
-        Health.OnHealthChange -= HandleHealthChange;
-        Health.OnHealthOut -= HandleDeath;
+        health.OnHealthChange -= HandleHealthChange;
+        health.OnHealthOut -= HandleDeath;
     }
 
     private void Update()
@@ -225,17 +226,23 @@ public class KrampusBoss : MonoBehaviour
 
     private IEnumerator ApplyMeleeDamage()
     {
-        yield return new WaitForSeconds(0.5f); // Adjust delay to sync with animation
+        print("Applying");
+
+        yield return new WaitForSeconds(0.1f); // Adjust delay to sync with animation
 
         // Check for all players/enemies in range
-        Collider[] hitTargets = Physics.OverlapSphere(transform.position, meleeAttackRange);
-        foreach (Collider target in hitTargets)
+        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(transform.position, meleeAttackRange, targetLayer);
+        print(hitTargets.Length);
+
+        foreach (Collider2D target in hitTargets)
         {
+            print(target.name);
+
             Health targetHealth = target.GetComponent<Health>();
             if (targetHealth != null && target.CompareTag("Player"))
             {
                 // Apply damage
-                targetHealth.DamageHealth(25); // Adjust damage value
+                targetHealth.DamageHealth(1); // Adjust damage value
                 Debug.Log($"Player {target.name} takes damage from melee attack!");
 
                 // Optional: Apply knockback
