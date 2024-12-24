@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class KrampusBoss : MonoBehaviour
 {
@@ -11,10 +12,13 @@ public class KrampusBoss : MonoBehaviour
     [SerializeField] private Transform projectileSpawnPoint;
     [SerializeField] private GameObject minionPrefab;
     [SerializeField] private Transform[] minionSpawnPoints;
+    [SerializeField] private int maxMinions = 5;
+    private List<GameObject> activeMinions = new List<GameObject>();
     [SerializeField] private Animator animator; // Reference to Animator
 
     private NavMeshAgent agent;
     private Health health;
+    [SerializeField] private Slider healthBar;
 
     [Header("Attack Parameters")]
     [SerializeField] private float meleeAttackRange = 2f;
@@ -31,7 +35,7 @@ public class KrampusBoss : MonoBehaviour
     private BossPhase currentPhase = BossPhase.Phase1;
 
     // Phase 2 Minion Summon Parameters
-    private float minionSummonCooldown = 5f;
+    private float minionSummonCooldown = 30f;
     private float timeSinceLastMinionSummon = 0f;
 
     [Header("Visual Effects")]
@@ -41,6 +45,13 @@ public class KrampusBoss : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         health = GetComponent<Health>();
+        if (healthBar != null)
+        {
+            healthBar.maxValue = health.max_health;
+            healthBar.value = health.current_health;
+        }
+
+
 
         if (agent == null) Debug.LogError("NavMeshAgent component is missing.");
         if (health == null) Debug.LogError("Health component is missing.");
@@ -49,10 +60,22 @@ public class KrampusBoss : MonoBehaviour
         // Subscribe to Health Events
         Health.OnHealthChange += HandleHealthChange;
         Health.OnHealthOut += HandleDeath;
+        Health.OnHealthChange += UpdateHealthBar;
+    }
+
+    private void OnDestroy()
+    {
+        Health.OnHealthChange -= HandleHealthChange;
+        Health.OnHealthOut -= HandleDeath;
     }
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            health.DamageHealth(10);
+            
+        }
         if (playerTarget == null)
         {
             Debug.LogWarning("Player target not assigned!");
@@ -79,6 +102,13 @@ public class KrampusBoss : MonoBehaviour
 
         // Handle attack pattern and phases
         HandlePhases();
+    }
+    private void UpdateHealthBar(int currentHealth)
+    {
+        if (healthBar != null)
+        {
+            healthBar.value = currentHealth;
+        }
     }
 
     private void HandlePhases()
@@ -151,7 +181,11 @@ public class KrampusBoss : MonoBehaviour
 
         // Reset minion summon timer when entering Phase 2
         timeSinceLastMinionSummon = 0f;
+        // Example: Flash red or play a sound
+        StartCoroutine(FlashColor(Color.red, 0.5f));
     }
+
+
 
     private void EnterPhase3()
     {
@@ -176,6 +210,17 @@ public class KrampusBoss : MonoBehaviour
 
         // Delay damage application to sync with animation
         StartCoroutine(ApplyMeleeDamage());
+    }
+
+    private IEnumerator FlashColor(Color color, float duration)
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        Color originalColor = sprite.color;
+
+        sprite.color = color;
+        yield return new WaitForSeconds(duration);
+
+        sprite.color = originalColor;
     }
 
     private IEnumerator ApplyMeleeDamage()
@@ -237,15 +282,17 @@ public class KrampusBoss : MonoBehaviour
 
     private void SummonMinions()
     {
-        if (currentPhase != BossPhase.Phase2) return;
-
-        Debug.Log("Krampus summons minions!");
+        if (activeMinions.Count >= maxMinions) return;
 
         foreach (Transform spawnPoint in minionSpawnPoints)
         {
             if (minionPrefab != null)
             {
-                Instantiate(minionPrefab, spawnPoint.position, Quaternion.identity);
+                GameObject minion = Instantiate(minionPrefab, spawnPoint.position, Quaternion.identity);
+                activeMinions.Add(minion);
+
+                // // Clean up minions when destroyed
+                // minion.GetComponent<Health>().OnHealthOut += () => activeMinions.Remove(minion);
             }
         }
     }
