@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/TopDownEngine/Demos/StartScreen/StartScreen.unity
     guid: 52360e1567e3fee418407abdfd132d73
   - enabled: 1
+    path: Assets/Scenes/gameplay_Design.unity
+    guid: cafa977e521695344a7e681998f122fc
+  - enabled: 1
+    path: Assets/Scenes/gameplay_dev.unity
+    guid: c39710d270db5d7488bd3e8811753b8b
+  - enabled: 1
     path: Assets/TopDownEngine/ThirdParty/MoreMountains/MMTools/Core/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
   - enabled: 1
@@ -138,3 +144,4 @@ EditorBuildSettings:
     path: Assets/TopDownEngine/ThirdParty/MoreMountains/MMTools/Demos/MMSceneLoading/MMSceneLoadingDemoSceneB.unity
     guid: 352d34cac2435634fb99618d19a3929c
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
