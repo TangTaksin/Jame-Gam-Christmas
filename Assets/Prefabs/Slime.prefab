@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: -6674150895169543126}
   - component: {fileID: -1610662844933273815}
   m_Layer: 7
-  m_Name: Triangle
+  m_Name: Slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
