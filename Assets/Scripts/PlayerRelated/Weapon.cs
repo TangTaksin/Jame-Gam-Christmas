@@ -48,7 +48,7 @@ public class Weapon : MonoBehaviour
             direction.x = 0;
         var vecRound = new Vector2(Mathf.RoundToInt(direction.x), Mathf.RoundToInt(direction.y));
 
-        print(vecRound);
+        //print(vecRound);
         //find same name
         foreach (var data in attackDatas)
         {
@@ -90,7 +90,7 @@ public class Weapon : MonoBehaviour
                 }
             }
 
-            print(string_debug);
+            //print(string_debug);
         }
     }
 
