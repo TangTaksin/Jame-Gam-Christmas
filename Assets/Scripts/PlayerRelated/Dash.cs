@@ -6,7 +6,7 @@ public class Dash : State
     Health _hp;
     Stamina _pStam;
 
-    public float dashForce = 1f;
+    public float dashVelocity = 1f;
     public bool needEnoughStamina = false;
     public float staminaCost = 25;
 
@@ -32,7 +32,8 @@ public class Dash : State
 
         if (use_succeed)
         {
-            rigid.AddForce(s_manager.LastInput * dashForce, ForceMode2D.Impulse);
+            rigid.linearVelocity += dashVelocity * s_manager.LastInput;
+            //rigid.AddForce(s_manager.LastInput * dashVelocity, ForceMode2D.Impulse);
             anim.Play("Dash");  
 
         }

@@ -8,7 +8,7 @@ public abstract class StateManager : MonoBehaviour
     public Animator animator;
 
     public Vector2 InputAxis { get; set; }
-    public Vector2 LastInput{ get; set; }
+    public Vector2 LastInput = Vector2.up;
 
     protected virtual void Start()
     {

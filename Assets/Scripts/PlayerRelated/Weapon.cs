@@ -25,6 +25,8 @@ public class Weapon : MonoBehaviour
     private void Update()
     {
         AttackTimeTracker();
+
+        
     }
 
     public void PlayAttack(int atk_index, Vector2 direction)

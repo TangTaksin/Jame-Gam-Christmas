@@ -59,18 +59,18 @@ public class PlayerStateMachine : StateManager
 
     void InputTimer()
     {
-        if (dashPressed)
-        {
-            dashBufferTimer -= Time.deltaTime;
-            if (dashBufferTimer < 0)
-                dashPressed = false;
-        }
-
         if (attackPressed)
         {
             atkBufferTimer -= Time.deltaTime;
             if (atkBufferTimer < 0)
                 attackPressed = false;
+        }
+
+        if (dashPressed)
+        {
+            dashBufferTimer -= Time.deltaTime;
+            if (dashBufferTimer < 0)
+                dashPressed = false;
         }
     }
 

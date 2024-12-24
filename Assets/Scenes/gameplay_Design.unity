@@ -1972,10 +1972,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2981452888728351969, guid: 319257ac16b6f664aa003f9b107001f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4040079678278925795, guid: 319257ac16b6f664aa003f9b107001f6,
         type: 3}
       propertyPath: topSpeed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040079678278925795, guid: 319257ac16b6f664aa003f9b107001f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4040079678278925795, guid: 319257ac16b6f664aa003f9b107001f6,
         type: 3}
@@ -2031,6 +2041,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001201869835115297, guid: 319257ac16b6f664aa003f9b107001f6,
+        type: 3}
+      propertyPath: dashForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6001201869835115297, guid: 319257ac16b6f664aa003f9b107001f6,
+        type: 3}
+      propertyPath: dashVelocity
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6330566823004037339, guid: 319257ac16b6f664aa003f9b107001f6,
         type: 3}

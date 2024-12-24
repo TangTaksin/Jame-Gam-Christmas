@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class WeaponHandling : State
 {
-    Animator animator;
+    PlayerStateMachine psm;
 
     public Weapon currentWeapon;
     public Transform weaponSpot;
@@ -21,6 +21,8 @@ public class WeaponHandling : State
     private void Start()
     {
         _mainCam = Camera.main;
+        psm = GetComponent<PlayerStateMachine>();
+
     }
 
     private void Update()
@@ -38,6 +40,15 @@ public class WeaponHandling : State
     public override void OnUpdate()
     {
         base.OnUpdate();
+
+        if (psm.dashPressed)
+        {
+            isComplete = true;
+            attack_index = 0;
+
+            expireTimer = 0;
+            expiring = false;
+        }
 
         AttackTracker();
     }
@@ -100,6 +111,7 @@ public class WeaponHandling : State
         if (currentWeapon.atk_timer == currentWeapon.currentAttack.movement_start)
         {
             rigid.linearVelocity /= 2;
+            //rigid.linearVelocity += currentWeapon.currentAttack.attackmovement
             rigid.AddForce(currentWeapon.currentAttack.attackmovement, ForceMode2D.Impulse);
         }
 
