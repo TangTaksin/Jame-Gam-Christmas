@@ -57,8 +57,6 @@ public class WeaponHandling : State
         if (currentWeapon.isAttacking)
             return;
 
-        
-
         var scn2pnt = _mainCam.ScreenToWorldPoint(Input.mousePosition);
         var trfm2mse = scn2pnt - transform.position;
 
@@ -74,10 +72,12 @@ public class WeaponHandling : State
 
         s_manager.LastInput = vecRound;
 
+        print("playing " + attackName[attack_index]);
+
         currentWeapon.PlayAttack(attack_index, trfm2mse);
 
         attack_index++;
-        if (attack_index >= attackName.Length)
+        if (attack_index > attackName.Length -1)
             attack_index = 0;
     }
 

@@ -13,6 +13,6 @@ public class KnockBack : MonoBehaviour
 
     public void ApplyKnockBack(Vector2 force)
     {
-        rb2d.AddForce(force * (100 - resistance), ForceMode2D.Impulse);
+        rb2d.AddForce(force * (100 - resistance)/100, ForceMode2D.Impulse);
     }
 }

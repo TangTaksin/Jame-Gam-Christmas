@@ -8,6 +8,9 @@ public abstract class State: MonoBehaviour
     protected Rigidbody2D rigid;
     protected StateManager s_manager;
 
+    float startTime;
+    float StateTime => Time.time - startTime;
+
     public void SetUp(Animator _anim, Rigidbody2D _rb, StateManager _statemMang)
     {
         anim = _anim;
@@ -15,7 +18,7 @@ public abstract class State: MonoBehaviour
         s_manager = _statemMang;
     }
 
-    public virtual void OnEnter() { isComplete = false; }
+    public virtual void OnEnter() { isComplete = false; startTime = Time.time; }
 
     public virtual void OnUpdate() { }
 
